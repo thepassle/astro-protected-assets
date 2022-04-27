@@ -1,4 +1,4 @@
-export default async (req, ctx) => {
+export default async (req) => {
   const url = new URL(req.url);
   const protectedRoutes = new URLPattern({pathname: '/protected/:img'});
   const match = protectedRoutes.exec(url);
