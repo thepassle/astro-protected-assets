@@ -6,6 +6,6 @@ export default async (req, ctx) => {
   const auth = url.searchParams.has('auth');
 
   if(match && !auth) return new Response(null, {status: 403});
-  return await ctx.next();
+  return;
 };
 
